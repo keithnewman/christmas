@@ -32,7 +32,6 @@ snowman_card <- function(filepath,
   )
   nose <- sf::st_polygon(list(nose_pts))
 
-  # sky
   g <- ggplot2::ggplot() +
     # snow on ground
     ggplot2::annotate(
@@ -133,5 +132,5 @@ snowman_card <- function(filepath,
     ggplot2::theme(
       plot.background = ggplot2::element_rect(fill = "#0e1c2e")
     )
-  return(g)
+  ggplot2::ggsave(filename = filepath, plot = g, height = 4, width = 4)
 }
