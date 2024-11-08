@@ -4,12 +4,12 @@
 \alias{secret_santa}
 \title{Secret Santa}
 \usage{
-secret_santa(names, seed = 2024)
+secret_santa(names, seed = 2512)
 }
 \arguments{
 \item{names}{Vector of names.}
 
-\item{seed}{Random seed.}
+\item{seed}{Random seed. Default 2512.}
 }
 \value{
 Data frame of names

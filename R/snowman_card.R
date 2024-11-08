@@ -6,16 +6,16 @@
 #' @param message Individual message
 #' @param greeting Greeting message. Default `"Merry Christmas"`
 #' @param n_snowflakes Number of snowflakes. Default 100.
-#' @param s Random seed. Defaul 2512.
+#' @param seed Random seed. Defaul 2512.
 #' @return PNG file
 
 snowman_card <- function(filepath,
                          message,
                          greeting = "Merry Christmas",
                          n_snowflakes = 100,
-                         s = 2512) {
+                         seed = 2512) {
   # generate data
-  set.seed(s)
+  set.seed(seed)
   snowflakes <- data.frame(
     x = stats::runif(n_snowflakes),
     y = stats::runif(n_snowflakes)
@@ -46,8 +46,8 @@ snowman_card <- function(filepath,
     ggplot2::geom_point(
       data = snowflakes,
       mapping = ggplot2::aes(
-        x = x,
-        y = y
+        x = .data$x,
+        y = .data$y
       ),
       colour = "white",
       pch = 8
@@ -59,7 +59,7 @@ snowman_card <- function(filepath,
         y0 = c(0.3, 0.5),
         r = c(0.15, 0.1)
       ),
-      mapping = ggplot2::aes(x0 = x0, y0 = y0, r = r),
+      mapping = ggplot2::aes(x0 = .data$x0, y0 = .data$y0, r = .data$r),
       fill = "white",
       colour = "white"
     ) +
@@ -68,9 +68,9 @@ snowman_card <- function(filepath,
       data = data.frame(
         x = c(0.6, 0.6, 0.6, 0.57, 0.62),
         y = c(0.25, 0.3, 0.35, 0.52, 0.52),
-        size = runif(5, 2, 4.5)
+        size = stats::runif(5, 2, 4.5)
       ),
-      mapping = ggplot2::aes(x = x, y = y, size = size)
+      mapping = ggplot2::aes(x = .data$x, y = .data$y, size = .data$size)
     ) +
     ggplot2::scale_size_identity() +
     # add sticks for arms

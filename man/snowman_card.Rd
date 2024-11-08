@@ -9,7 +9,7 @@ snowman_card(
   message,
   greeting = "Merry Christmas",
   n_snowflakes = 100,
-  s = 2512
+  seed = 2512
 )
 }
 \arguments{
@@ -21,7 +21,7 @@ snowman_card(
 
 \item{n_snowflakes}{Number of snowflakes. Default 100.}
 
-\item{s}{Random seed. Defaul 2512.}
+\item{seed}{Random seed. Defaul 2512.}
 }
 \value{
 PNG file
