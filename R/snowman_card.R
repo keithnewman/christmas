@@ -8,6 +8,7 @@
 #' @param n_snowflakes Number of snowflakes. Default 100.
 #' @param seed Random seed. Defaul 2512.
 #' @return PNG file
+#' @export
 
 snowman_card <- function(filepath,
                          message,

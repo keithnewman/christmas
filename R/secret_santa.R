@@ -5,6 +5,7 @@
 #' @param names Vector of names.
 #' @param seed Random seed. Default 2512.
 #' @return Data frame of names
+#' @export
 
 secret_santa <- function(names, seed = 2512) {
   if (length(unique(names)) != length(names)) {
