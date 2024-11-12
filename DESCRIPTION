@@ -1,10 +1,10 @@
 Package: christmas
-Title: R functions to help with christmas admin
+Title: R functions to help with Christmas admin
 Version: 0.0.0.9002
 Authors@R: 
     person("Nicola", "Rennie", , "nrennie35@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0003-4797-557X"))
-Description: R functions to help with christmas admin.
+Description: R functions to help with Christmas admin.
 License: CC BY 4.0
 Imports:
     ggforce,
