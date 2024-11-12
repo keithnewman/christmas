@@ -17,3 +17,6 @@ Data frame of names
 \description{
 Create Secret Santa allocations
 }
+\examples{
+secret_santa(c("Dasher", "Dancer", "Prancer", "Vixen"))
+}
