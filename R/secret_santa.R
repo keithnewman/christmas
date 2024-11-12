@@ -8,7 +8,7 @@
 #' @export
 
 secret_santa <- function(names, seed = 2512) {
-  if (length(unique(names)) != length(names)) {
+  if (anyDuplicated(names)) {
     stop("Non-unique names provided - do you need to add a surname?")
   }
   withr::with_seed(
