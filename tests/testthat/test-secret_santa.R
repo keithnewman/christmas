@@ -22,3 +22,11 @@ test_that("secret_santa() warns if the same person appears twice in the list", {
   )
   expect_error(secret_santa(nice_list), "Non-unique names provided")
 })
+
+test_that("secret_santa() warns if the number of players is too small", {
+  nice_list <- c(
+    "Rudolph",
+    "Dasher"
+  )
+  expect_error(secret_santa(nice_list), "It's not a secret with 2 or fewer players")
+})
