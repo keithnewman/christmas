@@ -14,7 +14,7 @@ secret_santa <- function(names, seed = 2512) {
     stop("Non-unique names provided - do you need to add a surname?")
   }
 
-  if(length(names) <= 2) {
+  if (length(names) <= 2) {
     stop("It's not a secret with 2 or fewer players")
   }
 
