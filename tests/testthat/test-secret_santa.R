@@ -28,5 +28,5 @@ test_that("secret_santa() warns if the number of players is too small", {
     "Rudolph",
     "Dasher"
   )
-  expect_error(secret_santa(nice_list), "It's not a secret with 2 or fewer players")
+  expect_error(secret_santa(nice_list), "It's not a secret with 3 or fewer players")
 })
