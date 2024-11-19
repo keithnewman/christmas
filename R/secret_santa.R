@@ -13,6 +13,11 @@ secret_santa <- function(names, seed = 2512) {
   if (anyDuplicated(names)) {
     stop("Non-unique names provided - do you need to add a surname?")
   }
+
+  if (length(names) <= 3) {
+    stop("It's not a secret with 3 or fewer players")
+  }
+
   withr::with_seed(
     seed = seed,
     code = {
