@@ -7,15 +7,16 @@
 secret_santa(names, seed = 2512)
 }
 \arguments{
-\item{names}{Vector of names.}
+\item{names}{Vector of names for the participants. You should have 4 or more player names to
+create a Secret Santa allocation that can remain secret.}
 
 \item{seed}{Random seed. Default 2512.}
 }
 \value{
-Data frame of names
+Data frame of names providing the gift giver and their gift recipient's name.
 }
 \description{
-Create Secret Santa allocations
+Create Secret Santa gift giving allocations.
 }
 \examples{
 secret_santa(c("Dasher", "Dancer", "Prancer", "Vixen"))
